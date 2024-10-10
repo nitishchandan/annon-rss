@@ -1,4 +1,4 @@
-name: Add New Website Scraper
+name: Test Scraper
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  create-scraper:
+  test-scraper:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
@@ -21,6 +21,6 @@ jobs:
       run: |
         pip install -r requirements.txt
 
-    - name: Run script to create new scraper
+    - name: Run test scraper
       run: |
         python create_scraper.py
